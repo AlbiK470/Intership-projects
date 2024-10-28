@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albi's Portfolio</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="./script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <nav>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu">
+           <img src="./images/logoalbi.png" alt="">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">      
+        <div class="text-container">
+            <h1>MY PORTFOLIO</h1>
+        <button id="download-button" type="submit">Download CV
+            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 13V4M7 14H5a1 1 0 0 0-1 1v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4a1 1 0 0 0-1-1h-2m-1-5-4 5-4-5m9 8h.01"/>
+              </svg>              
+        </button>
+        </div>
+        <div class="image-download-container">
+            <img src="./images/sitting.png" alt="Image">
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-text-container">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Possimus perspiciatis doloribus eaque in vero deserunt 
+            voluptatem reprehenderit ipsum esse repellendus fuga maxime et, 
+            culpa sunt, sapiente similique molestiae corporis aliquam!
+        </p>
+        </div>
+        <img src="./images/desk.png" alt="">
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="button-container">
+            <button class="filter-button" id="all">All</button>
+            <button class="filter-button" id="figma">Figma</button>
+            <button class="filter-button" id="javascript">JavaScript</button>
+        </div>
+        <div class="project-container">
+            <div class="project figma">
+                <img src="./images/figma.png" alt="Figma Project 1">
+                <p>Figma Design</p>
+            </div>
+            <div class="project figma">
+                <img src="./images/figma.png" alt="Figma Project 2">
+                <p>This Project</p>
+            </div>
+            <div class="project javascript">
+                <img src="./images/javasc.png" alt="JavaScript Exercises">
+                <p>JavaScript Exercises</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Contact Me</h2>
+                <p>Feel free to reach out!</p>
+                <img src="./images/bars.png" alt="Contact Image">
+            </div>
+            <div class="contact-form">
+                <div class="horizontal-inputs">
+                    <div class="input__container">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name" required />
+                    </div>
+                    <div class="input__container">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required />
+                    </div>
+                </div>
+                <div class="input__container">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Message" required></textarea>
+                </div>
+                <button id="submit-button" type="submit">Send Message
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+                        <path d="M 39.175781 7.015625 C 37.807781 7.015625 36.160922 7.4572344 33.669922 8.4902344 L 33.369141 8.6132812 C 29.564141 10.193281 25.890875 11.731312 22.421875 13.195312 C 21.865875 13.430312 21.511719 13.972172 21.511719 14.576172 C 21.511719 15.649172 22.608656 16.374031 23.597656 15.957031 C 29.256656 13.569031 33.770359 11.698672 34.818359 11.263672 C 36.746359 10.462672 38.178781 10.017578 39.175781 10.017578 C 40.862781 10.017578 41.305641 11.293062 40.806641 14.289062 C 40.497641 16.141063 39.874156 20.308328 39.160156 24.861328 C 39.017156 25.771328 39.720578 26.597656 40.642578 26.597656 L 40.644531 26.597656 C 41.382531 26.597656 42.012953 26.058125 42.126953 25.328125 C 42.436953 23.352125 42.731187 21.441187 42.992188 19.742188 C 43.323188 17.586188 43.594578 15.81825 43.767578 14.78125 C 44.116578 12.68625 44.277312 10.314703 42.820312 8.5957031 C 42.208312 7.8757031 41.080781 7.015625 39.175781 7.015625 z M 16.373047 15.962891 C 16.130234 15.937594 15.876406 15.972375 15.628906 16.078125 C 12.128906 17.574125 8.9517969 18.947391 6.2167969 20.150391 C 5.1427969 20.623391 1.8769062 22.060406 2.0039062 25.066406 C 2.0579062 26.363406 2.771375 28.132406 5.859375 29.191406 L 6.0878906 29.269531 C 6.9498906 29.566531 8.7439844 30.185844 10.583984 30.714844 C 11.703984 31.036844 12.716781 31.191406 13.675781 31.191406 C 15.339781 31.191406 16.628719 30.717062 17.636719 30.164062 C 17.631719 30.332062 17.635438 30.501875 17.648438 30.671875 C 17.830437 32.983875 19.617547 34.251766 20.685547 35.009766 L 20.835938 35.115234 C 22.412938 36.243234 29.549422 40.957234 30.357422 41.490234 C 31.878422 42.494234 33.251641 42.982422 34.556641 42.982422 C 36.608641 42.982422 39.258516 41.886062 40.228516 36.664062 C 40.485516 35.280062 40.755391 33.742766 41.025391 32.134766 C 41.179391 31.219766 40.474875 30.382812 39.546875 30.382812 C 38.814875 30.382812 38.187406 30.910812 38.066406 31.632812 C 37.798406 33.228813 37.533297 34.753187 37.279297 36.117188 C 36.777297 38.819187 35.871688 39.984375 34.554688 39.984375 C 33.830688 39.984375 32.983766 39.633234 32.009766 38.990234 C 30.689766 38.118234 24.025125 33.710781 22.578125 32.675781 C 21.258125 31.732781 19.436703 30.597281 21.720703 28.363281 C 22.533703 27.567281 27.861719 22.480484 32.011719 18.521484 C 32.454719 18.098484 32.083797 17.453125 31.591797 17.453125 C 31.479797 17.453125 31.360141 17.487453 31.244141 17.564453 C 25.650141 21.274453 17.89325 26.424703 16.90625 27.095703 C 15.91925 27.765703 14.957781 28.195312 13.675781 28.195312 C 13.020781 28.195312 12.281109 28.082031 11.412109 27.832031 C 9.4691094 27.274031 7.5710313 26.609469 6.8320312 26.355469 C 3.9870312 25.379469 4.6627813 24.114438 7.4257812 22.898438 C 10.420781 21.581437 13.652453 20.187937 16.814453 18.835938 C 17.366453 18.599937 17.722656 18.058031 17.722656 17.457031 L 17.722656 17.455078 C 17.722656 16.648078 17.101484 16.038781 16.373047 15.962891 z"></path>
+                        </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+</body>
+<footer>
+    <nav class="footer-nav">
+        <ul>
+            <li>                 
+                <a href="#home">
+                    <svg class="footer-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4 12 8-8 8 8M6 10.5V19a1 1 0 0 0 1 1h3v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h3a1 1 0 0 0 1-1v-8.5"/>
+                  </svg>  Home</a>
+            </li>
+            <li>                
+                <a href="#about">
+                    <svg class="footer-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 19V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v13H7a2 2 0 0 0-2 2Zm0 0a2 2 0 0 0 2 2h12M9 3v14m7 0v4"/>
+                  </svg> About Me</a>
+            </li>
+            <li>                 
+                <a href="#contact">
+                    <svg class="footer-icon" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.427 14.768 17.2 13.542a1.733 1.733 0 0 0-2.45 0l-.613.613a1.732 1.732 0 0 1-2.45 0l-1.838-1.84a1.735 1.735 0 0 1 0-2.452l.612-.613a1.735 1.735 0 0 0 0-2.452L9.237 5.572a1.6 1.6 0 0 0-2.45 0c-3.223 3.2-1.702 6.896 1.519 10.117 3.22 3.221 6.914 4.745 10.12 1.535a1.601 1.601 0 0 0 0-2.456Z"/>
+                      </svg> Contact</a>
+            </li>
+        </ul>
+    </nav>
+    <p>&copy; 2024 Albi's Portfolio. All rights reserved.</p>
+</footer>
+</html>

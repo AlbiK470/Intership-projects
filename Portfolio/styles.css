@@ -1,0 +1,615 @@
+html {
+    scroll-behavior: smooth;
+  }
+  body, h1, h2, p, ul, li {
+      list-style: none;
+  }
+  
+  a {
+      color: inherit;
+  }
+  #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #222831;  
+      z-index: -1; 
+  }
+  body {
+      background-color: #222831;
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      color: white;
+      font-weight: bold;
+      line-height: 1.6;
+  }
+  
+  nav {
+      background: #222831;
+      color: #fff;
+      padding: 10px 0;
+      justify-content: center;
+      position: relative;
+  }
+  
+  .nav-menu{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+  }
+  .nav-menu img{
+      margin-right: 30px;
+      width: 200px;
+      height: 200px;
+  }
+  .nav-menu li{
+      list-style: none;
+      margin: 0 15px;
+  }
+  .nav-menu .logo li{
+      size: 100px;
+  }
+  
+  .hamburger{
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 10px;
+  }
+  
+  .hamburger span {
+      height: 3px;
+      width: 25px;
+      background: #fff;
+      margin-bottom: 5px;
+      display: block;
+  }
+  
+  nav ul {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+      margin: 10px;
+  }
+  
+  nav li {
+      display: inline-block;
+      margin: 0 15px;
+  }
+  
+  nav a {
+      text-decoration: none;
+      padding: 5px 10px;
+      transition: all 0.3s ease;
+      position: relative;
+  }
+  
+  nav a:hover {
+      background: #575757;
+      border-radius: 5px;
+      color: #00ADB5;
+  }
+  
+  nav a::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: 0;
+      left: 50%;
+      background-color: #00ADB5;
+      transition: all 0.3s ease;
+  }
+  
+  nav a:hover::after {
+      width: 100%;
+      left: 0;
+  }
+  
+  section {
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #home {
+      display: flex;
+      align-items: center;
+  }
+  
+  .text-container {
+      flex: 1; 
+      text-align: left; 
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 30px;
+  }
+  
+  .image-download-container {
+      flex: 1; 
+      text-align: right;
+  }
+  
+  .image-download-container img {
+      height: 300px; 
+      width: auto;
+  }
+  
+  h1 {
+      text-transform: uppercase; 
+      margin-bottom: 10px; 
+  }
+  
+  button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background: #575757; 
+      color: white; 
+      border: none; 
+      border-radius: 30px; 
+      cursor: pointer; 
+      transition: all 0.3s ease;
+  }
+  
+  button:hover {
+      background: #00ADB5; transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  }
+  button:active{
+      transform: translateY(-1px);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  }
+  
+  .input__container {
+      display: flex;
+      flex-direction: column;
+      margin: 15px 0;
+  }
+  .input__container-horizontal{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 15px 0;
+  }
+  .input__container-horizontal > div{
+      flex: 1;
+      margin-right: 10px;
+      width: calc(50% - 5px);
+  }
+  .input__container-horizontal > div:last-child{
+      margin-right: 0;
+  }
+  .input__container label{
+      text-align: left;
+      margin-right: 5px;
+  }
+  label {
+      width: 100px;
+      text-align: right;
+      margin-right: 10px;
+  }
+  
+  .input__container input[type="text"],
+  .input__container input[type="email"],
+  .input__container textarea {
+      width: 100%;
+      padding: 10px;  
+      border: 1px solid #575757;
+      border-radius: 10px;
+      background-color: #575757;
+      color: white;
+      resize: none;
+      box-sizing: border-box;
+  }
+  
+  .input__container > * {
+      margin-bottom: 10px;
+  }
+  
+  .input__container > label:nth-child(1),
+  .input__container > input[type="text"] {
+      margin-bottom: 0;
+  }
+  .input__container,
+  .input__container input[type="text"],
+  .input__container input[type="email"],
+  .input__container textarea {
+      max-width: none;
+  }
+  .horizontal-inputs {
+      display: flex;
+      justify-content: space-between;
+  }
+  
+  .horizontal-inputs .input__container {
+      width: 45%;
+  }
+  textarea {
+      height: 100px;
+      margin-top: 10px;
+      resize: none;
+  }
+  #about{
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .about-text-container {
+      flex: 1; 
+      display: flex;
+      flex-direction: column; 
+  }
+  .about-text-container h2, .about-text-container p{
+      margin-right: 20px;
+  }
+  .about-text-container h2{
+      margin-bottom: 10px;
+      font-size: 50px;
+  }
+  #about img{
+      flex:1;
+  }
+  #portfolio{
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  #portfolio h2{
+      font-size: 35px;
+      margin-bottom: 20px;
+      padding: 15px;
+  }
+  .button-container{
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      margin-bottom: 20px;
+  }
+  .button-container{
+      justify-content: flex-start;
+  }
+  .filter-button{
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin: 0 10px;
+  }
+  
+  .project-container{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      cursor: pointer;
+  }
+  .project{
+      padding: 20px;
+      margin: 10px;
+      width: 200px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border-radius: 30px;
+  }
+  .project:hover{
+      transform: scale(1.05);
+      background-color: #393E46;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  }
+  .project img{
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      transition: all 0.3s ease;
+  }
+  .project:hover img{
+      transform: translateY(-5px);
+  }
+  .project p{
+      margin-top: 10px;
+      transition: all 0.3s ease;
+  }
+  .project:hover p{
+      color: #00ADB5;
+  }
+  .project-hidden{
+      opacity: 0;
+      transform: scale(0.8);
+      position: absolute;
+      pointer-events: none;
+  }
+  .project.visible{
+      opacity: 1;
+      transform: scale(1);
+      position: relative;
+      pointer-events: none;
+  }
+  .project.figma{
+      border: 1px solid  #575757;
+      background-color: #575757;
+      border-radius: 30px;
+  }
+  .project.javascript{
+      border: 1px solid  #575757;
+      background-color: #575757;
+      border-radius: 30px;
+  }
+  #contact{
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      margin: 20 px auto;
+      max-width: 800px;
+  }
+  .contact-container{
+      display: flex;
+      flex-direction: row;
+      max-width: 100%;
+      justify-content: space-between;
+  }
+  .contact-info{
+      flex: 1;
+      margin-right: 170px;
+      padding-left: 50px;
+      max-width: 200px;
+  }
+  .contact-info h2{
+      font-size: 35px;
+  }
+  .contact-form {
+      flex: 2; 
+      width: 100%;
+      max-width: 500px;
+  }
+  #submit-button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 4px;
+      background-color: #575757;
+      color: white;
+      cursor: pointer;
+      margin-top: 15px;
+      border: none;
+      border-radius: 20px; 
+      font-weight: bold;
+  }
+  #submit-button svg{
+      width: 24px;
+      height: 24px;
+      margin: 0 10px;
+      vertical-align: middle;
+  }
+  #submit-button svg path {
+      fill: white;
+  }
+  #submit-button:hover {
+      background: #00ADB5;
+  }
+  #download-button{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 20px;
+      border-radius: 4px;
+      background-color: #575757;
+      color: white;
+      cursor: pointer;
+      margin-top: 15px;
+      border: none;
+      border-radius: 20px; 
+      font-weight: bold;
+  }
+  #download-button svg{
+      width: 24px;
+      height: 24px;
+      margin: 0 10px;
+      vertical-align: middle;
+  }
+  #download-button svg path{
+      fill:white;
+  }
+  #download-button:hover{
+      background: #00ADB5;
+  }
+  footer{
+      background-color: #222831;
+      padding: 20px 0;
+      text-align: center;
+  }
+  .footer-nav ul{
+      list-style: none;
+      padding: 0;
+      margin : 0 0 15px 0;
+  }
+  .footer-nav ul li{
+      text-decoration: none;
+  }
+  footer p{
+      margin: 0;
+      font-size: 0.9em;
+  }
+  .footer-icon{
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+      vertical-align: middle;
+  }
+  .footer-nav a{
+      display: flex;
+      align-items: center;
+  }
+  @media screen and (max-width: 1024px) {
+      section {
+          padding: 15px;
+          margin: 15px auto;
+      }
+  
+      #home, #about, #contact {
+          flex-direction: column;
+      }
+  
+      .text-container, .image-download-container, .about-text-container {
+          width: 100%;
+          text-align: center;
+      }
+  
+      .contact-container {
+          flex-direction: column;
+      }
+  
+      .contact-info, .contact-form {
+          width: 100%;
+          max-width: none;
+          margin-right: 0;
+          padding-left: 0;
+      }
+      .image-download-container img,
+      #about img {
+          max-width: 100%;
+          height: auto;
+          object-fit: contain;
+      }
+  }
+  @media screen and (max-width: 768px) {
+      #home{
+          flex-direction: column;
+          align-items: center;
+      }
+      .text-container, .image-download-container {
+          width: 100%;
+          text-align: center;
+      }
+      .image-download-container img,
+      #about img {
+          max-width: 100%;
+          height: auto;
+          object-fit: contain;
+      }
+      #about {
+          flex-direction: column;
+          align-items: center;
+      }
+      .about-text-container {
+          width: 100%;
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      .project {
+          width: calc(50% - 20px); 
+          margin: 10px;
+      }
+  
+      .project img {
+          max-width: 90%;
+      }
+      .filter-button{
+          margin: 5px;
+          padding: 8px 16px;
+          font-size: 14px;
+      }
+      #portfolio {
+          padding: 20px 10px;
+          align-items: center;
+      }
+      #portfolio h2{
+          text-align: center;
+          width: 100%;
+      }
+      .button-container {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+      .project-container{
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+      }
+      .contact-container {
+          flex-direction: column;
+          align-items: center;
+      }
+  
+      .contact-info, .contact-form {
+          width: 100%;
+          max-width: none;
+          margin-right: 0;
+          padding-left: 0;
+          text-align: center;
+      }
+      .hamburger{
+          display: flex;
+      }
+      .nav-menu{
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: #393E46;
+          box-shadow: black;
+      }
+      .nav-menu.active {
+          display: flex;
+      }
+  
+      .nav-menu li {
+          margin: 10px 0;
+          text-align: center;
+      }
+  }
+  @media screen and (max-width: 480px) {
+      .image-download-container img,
+      #about img {
+          max-width: 90%;
+          height: auto;
+          object-fit: contain;
+      }
+  
+      .project img {
+          max-width: 100%;
+      }
+      .project{
+          width: 100%;
+      }
+      nav ul{
+          flex-direction: column;
+          align-items: center;    
+      }
+      nav ul li{
+          margin: 5px 0;
+      }
+      .hamburger{
+          display: flex;
+      }
+  
+      .nav-menu{
+          display: none;
+          flex-direction: column;
+          width: 100%;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: #222831;
+      }
+      .nav-menu.active{
+          display: flex;
+      }
+      .nav-menu li{
+          margin: 10px 0;
+          text-align: center;
+      }
+      .project{
+          width: 100px;
+      }
+  }
